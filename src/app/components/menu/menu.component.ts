@@ -23,10 +23,14 @@ export class MenuComponent implements OnInit {
     path:'/contact'
   },
   {
-  name:'Posts',
+  name:'posts',
   path:'/posts'
+  },
+  {
+    name:'comments',
+    path:'/comments'
   }
-
+  
   ]; 
 
   constructor() { }

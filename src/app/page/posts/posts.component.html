@@ -1,1 +1,7 @@
-<p>posts works!</p>
+<h1>Mis Posts</h1>
+<ul class="list-group">
+    <li *ngFor="let post of posts" class="list-group-item">
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.body }}</p>
+    </li>
+</ul>

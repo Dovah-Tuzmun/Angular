@@ -23,6 +23,11 @@ const routes: Routes=[
     //loadChildren: '.page/posts/post.module#PostsModule'
     loadChildren: ()=> import('./page/posts/posts.module').then(m => m.PostsModule)
   },
+  {
+    path:'comments',
+    //loadChildren: '.page/posts/post.module#PostsModule'
+    loadChildren: ()=> import('./page/comments/comments.module').then(m => m.CommentsModule)
+  },
 
   {
     path:'**',
