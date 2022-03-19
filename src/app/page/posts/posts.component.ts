@@ -14,9 +14,14 @@ export class PostsComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.dataService.getPost().subscribe(posts =>{
-      this.posts = posts;
-    });
+    this.posts = this.dataService.getPost();
+  //   this.dataService.getPost().subscribe(posts =>{
+  //     this.posts = posts;
+  //   });
+  }
+
+  escuchaHijo(id:number){
+    console.log('Click en:', id);
   }
 
 }

@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 
 import { MenuComponent } from './components/menu/menu.component';
 import { PagesModule } from './page/pages.module';
+import { CommentComponent } from './page/comments/comment/comment.component';
 
 @NgModule({
   declarations: [

@@ -1,8 +1,4 @@
 <h1>Mis Comentarios</h1>
 <ul class="list-group">
-    <li *ngFor="let comment of comments" class="list-group-item">
-        <p>{{ comment.name }}</p>
-        <p>{{ comment.email }}</p>
-        <p>{{ comment.body }}</p>
-    </li>
+    <app-comment *ngFor="let comment of comments | async " [comment]="comment" (cComment)="escuchaHijo($event)"></app-comment>
 </ul>

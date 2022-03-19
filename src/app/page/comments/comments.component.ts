@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from 'src/app/service/data.service';
+import {CommentService } from 'src/app/service/comment.service';
 
 
 @Component({
@@ -9,14 +9,15 @@ import { DataService } from 'src/app/service/data.service';
 })
 export class CommentsComponent implements OnInit {
   comments: any;
-  constructor(private dataService: DataService) {
+  constructor(private commentService: CommentService) {
 
   }
 
   ngOnInit(): void {
-    this.dataService.getComment().subscribe(comments =>{
-      this.comments = comments;
-    });
+    this.comments = this.commentService.getComment();
+  }
+  escuchaHijo(id:number){
+    console.log('Click en:', id);
   }
 
 }
